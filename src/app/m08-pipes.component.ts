@@ -14,7 +14,6 @@
  */
 import { Component } from '@angular/core';
 @Component({
-    moduleId: module.id,
     selector: 'aplicacio',
     template: `<h1> uppercase {{cadena | uppercase}}</h1>
               <h1>lowercase {{cadena | lowercase}}</h1>

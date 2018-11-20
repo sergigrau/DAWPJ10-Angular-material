@@ -14,9 +14,8 @@
  * Desenvolupament Aplicacions Web. Jesuïtes El Clot
  */
 import { Component } from '@angular/core';
-
+import { NgModule } from '@angular/core';
 @Component({
-  moduleId: module.id,
   selector: 'aplicacio',
   template: `
     <nav class="navbar navbar-expand-lg navbar-light bg-light">

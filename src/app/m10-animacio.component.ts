@@ -12,13 +12,9 @@
  * ORIGEN
  * Desenvolupament Aplicacions Web. Jesuïtes El Clot
  */
-
-
-import { 
-    Component, Input, 
-    trigger, state, animate, transition, style 
-} from '@angular/core';
-
+import { Component, Input} from '@angular/core';
+import { trigger, state, animate, transition, style } from '@angular/animations';
+import { NgModule } from '@angular/core';
 @Component({
   selector : 'animacio',
   animations: [
