@@ -8,12 +8,14 @@
  * CHANGELOG
  * 20.12.2017
  * - Component que mostra com fer peticions a un backend
+  * 1.12.2020
+ * - Actualització a Angular 11
  * NOTES
  * ORIGEN
  * Desenvolupament Aplicacions Web. Jesuïtes El Clot
  */
 import { Component, OnInit } from '@angular/core';
-import { Observable } from "rxjs/Observable";
+import { Observable } from "rxjs";
 import { HttpClient } from "@angular/common/http";
 import { HttpParams } from '@angular/common/http';
 
@@ -40,7 +42,7 @@ interface Alumne {
       <audio src="http://localhost:8888/audio1.mp3" autoplay controls></audio>
   `})
 export class M12_Http implements OnInit {
-    private alumnes$: Observable<Alumne[]>;
+    public alumnes$: Observable<Alumne[]>;
 
     constructor(private http: HttpClient) {
     }

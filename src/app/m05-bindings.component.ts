@@ -11,13 +11,13 @@
  * - Component embolcall que utilitza un subcomponent amb la lògica
  * 6.12.2017
  * - correcció de bugs i creació d'un fitxer amb 2 components
+ * 1.12.2020
+ * - Actualització a Angular 11
  * NOTES
  * ORIGEN
  * Desenvolupament Aplicacions Web. Jesuïtes El Clot
  */
 import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
-import { Observable } from 'rxjs/Rx';
-import { TimerObservable } from 'rxjs/observable/TimerObservable';
 
 @Component({
     selector: 'aplicacio',

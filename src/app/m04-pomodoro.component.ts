@@ -12,6 +12,8 @@
  * - Component que mostra com poden utilitzar esdeveniment DOM
  * 15.10.2017
  * - Actualització a Angular 5
+  * 1.12.2020
+ * - Actualització a Angular 11
  * NOTES
  * ORIGEN
  * Desenvolupament Aplicacions Web. Jesuïtes El Clot

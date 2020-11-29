@@ -8,7 +8,8 @@
  * CHANGELOG
  * 15.10.2017
  * - Component que definex el marc per a fer uns encaminaments a altres components
- *
+  * 1.12.2020
+ * - Actualització a Angular 11
  * NOTES
  * ORIGEN
  * Desenvolupament Aplicacions Web. Jesuïtes El Clot

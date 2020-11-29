@@ -17,7 +17,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AppComponent } from './app.component';
 import { M01_SalutacioComponent } from './m01-salutacio.component';
 import { M02_SumaComponent } from './m02-suma.component';
 

@@ -23,14 +23,15 @@ import { Component } from '@angular/core';
     template: `
 
     <div class="form-group">
-    <input type="text" class="form-control"  placeholder="Entra nombre 1"  #n1 required>
+    <input type="text" class="form-control"  placeholder="Entra nombre 1"   [(ngModel)]="n1" required>
     </div>
 
     <div class="form-group">
-    <input type="text" class="form-control"  placeholder="Entra nombre 2"  #n2 required>
+    <input type="text" class="form-control"  placeholder="Entra nombre 2"  [(ngModel)]="n2" required>
     </div>
-    <button  class="btn btn-primary" (click)="sumar(n1.value, n2.value)"> suma </button> 
-    <button  class="btn btn-primary" (click)="restar(n1.value, n2.value)"> resta </button>
+    <button  class="btn btn-primary" (click)="sumar()"> suma </button>
+    <button  class="btn btn-primary" (click)="restar()"> resta </button>
+    
     <div class="alert alert-primary" role="alert">
       <h3>el resultat és {{resultat}} </h3>
     </div>
@@ -39,18 +40,19 @@ import { Component } from '@angular/core';
     `,
     styles: ['h2 { color: #900 }']
 })
-export class M02_SumaComponent {
+export class M02_SumaComponent_bis {
     
-    resultat: number;
-    
+    public resultat: number;
+    public n1: number;
+    public n2: number;
     constructor() {
         this.resultat = 0;
     }
-    sumar(n1:number, n2:number): void {
-        this.resultat = n1 * 1 +n2 * 1;
+    sumar(): void {
+        this.resultat = this.n1 + this.n2 * 1;
     }
-    restar(n1:number, n2:number): void {
-        this.resultat = n1 * 1 - n2 * 1;
+    restar(): void {
+        this.resultat = this.n1 - this.n2 * 1;
     }
 
 }

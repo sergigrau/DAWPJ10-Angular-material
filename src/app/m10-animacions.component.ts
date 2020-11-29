@@ -8,6 +8,8 @@
  * CHANGELOG
  * 5.12.2017
  * - Component que fa ús d'animacions personalitzades
+  * 1.12.2020
+ * - Actualització a Angular 11
  * NOTES
  * ORIGEN
  * Desenvolupament Aplicacions Web. Jesuïtes El Clot

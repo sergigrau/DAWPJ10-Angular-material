@@ -11,6 +11,8 @@
  * - Component embolcall que utilitza un subcomponent amb la lògica
  * 5.12.2017
  * - correccions i actualitzacions
+   * 1.12.2020
+ * - Actualització a Angular 11
  * NOTES
  * ORIGEN
  * Desenvolupament Aplicacions Web. Jesuïtes El Clot

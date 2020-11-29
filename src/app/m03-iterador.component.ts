@@ -11,6 +11,8 @@
  * - Component que te la lògica del component compte enrera,
  * 15.10.2017
  * - Actualització a Angular 5
+ * 1.12.2020
+ * - Actualització a Angular 11
  * NOTES
  * ORIGEN
  * Desenvolupament Aplicacions Web. Jesuïtes El Clot
