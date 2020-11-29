@@ -18,7 +18,7 @@ var url = require("url");
 var querystring = require("querystring");
 var fs = require('fs');
 
-const alumnes = '[{"nom":"sergi", "cognom":"grau"},{"nom":"joan", "cognom":"angular"}]';
+let alumnes = [{"nom":"sergi", "cognom":"grau"},{"nom":"joan", "cognom":"angular"}];
 
 function iniciar() {
 	function onRequest(request, response) {
@@ -44,7 +44,7 @@ function iniciar() {
 			response.writeHead(200, {
 				"Content-Type": "application/json; charset=utf-8"
 			});
-			response.write(alumnes);
+			response.write(JSON.stringify(alumnes));
 			response.end();
 		} 
 		else if(pathname == '/audio1.mp3'){
@@ -60,12 +60,12 @@ function iniciar() {
 });
 		}
 		else if(pathname == '/afegirAlumne'){
-
+			alumnes.push({"nom":"foo", "cognom":"bar"})
 			
 			response.writeHead(200, {
 				"Content-Type": "application/json; charset=utf-8"
 			});
-			response.write(alumnes);
+			response.write(JSON.stringify(alumnes));
 			response.end();
 		}
 		

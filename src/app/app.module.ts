@@ -56,6 +56,6 @@ import {M12_HttpDAOService} from './m12-httpdao.service';
     HttpClientModule
   ],
   providers: [M12_HttpDAOService],
-  bootstrap: []
+  bootstrap: [M12_Http]
 })
 export class AppModule { }

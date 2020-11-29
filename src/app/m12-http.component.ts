@@ -30,7 +30,7 @@ interface Alumne {
     selector: 'aplicacio',
     template: `
 
-    <img src="../assets/logo.png" >
+    <img src="../assets/logo_clot.png" >
       <ul *ngIf="alumnes$ | async as alumnes else senseDades">
           <li *ngFor="let alumne of alumnes">
               {{alumne.nom}}
