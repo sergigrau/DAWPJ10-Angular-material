@@ -18,7 +18,7 @@ import {Producte} from './m13-compra-producte-component';
   selector : 'aplicacio',
   template: `
   
-  <producte *ngFor='let producte of llistaProductes' ></producte>
+  <producte *ngFor='let p of llistaProductes' [producte]="p"></producte>
   `
 })
 export class M13_Compra {

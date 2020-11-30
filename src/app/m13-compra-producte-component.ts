@@ -12,7 +12,8 @@
  * ORIGEN
  * Desenvolupament Aplicacions Web. Jesuïtes El Clot
  */
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { M13_Carret } from './m13-carret-component';
 
 @Component({
     selector: 'producte',
@@ -20,25 +21,31 @@ import { Component, Input } from '@angular/core';
   <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">{{producte.nom}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">{{producte.preu}}</h6>
+    <h6 class="card-subtitle mb-2 text-muted">{{producte.preu | currency:'EUR'}}</h6>
     <p class="card-text">{{producte.descripcio}}</p>
-    <a href="#" class="card-link">Comprar</a>
+    <button type="button" class="btn btn-primary" (click)="afegirProducte()" >Comprar</button>
   </div>
 </div>
   `
 })
-export class M13_CompraProducte {
+export class M13_CompraProducte  {
      @Input() producte: Producte;
-    constructor() {
+     private carret = new M13_Carret();
 
+    constructor() {
+    }
+    afegirProducte() {
+      this.carret.afegirProducte(this.producte);
     }
 }
 
+
+
 export class Producte {
-    private id: string;
-    private nom: string;
-    private descripcio: string;
-    private preu: number;
+    public id: string;
+    public nom: string;
+    public descripcio: string;
+    public preu: number;
 
     constructor(id: string,
         nom: string,
