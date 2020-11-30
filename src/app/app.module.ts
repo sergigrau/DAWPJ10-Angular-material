@@ -28,6 +28,9 @@ import { M11_EncaminamentComponent } from './m11-encaminament.component';
 import {M12_Http} from './m12-http.component';
 import {M12_HttpDAOService} from './m12-httpdao.service';
 
+import {M13_Compra} from './m13-compra-component'
+import {M13_CompraProducte} from './m13-compra-producte-component';
+
 @NgModule({
   declarations: [
     M01_SalutacioComponent,
@@ -46,7 +49,9 @@ import {M12_HttpDAOService} from './m12-httpdao.service';
     M10_AnimacioComponent,
     M10_AnimacionsComponent,
     M11_EncaminamentComponent,
-    M12_Http
+    M12_Http,
+    M13_CompraProducte,
+    M13_Compra
   ],
   imports: [
     BrowserModule,
@@ -55,7 +60,7 @@ import {M12_HttpDAOService} from './m12-httpdao.service';
     AppEncaminamentModule,
     HttpClientModule
   ],
-  providers: [M12_HttpDAOService],
-  bootstrap: [M12_Http]
+  //providers: [M12_HttpDAOService],
+  bootstrap: [M13_Compra]
 })
 export class AppModule { }
