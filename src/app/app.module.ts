@@ -20,9 +20,9 @@ import { AppEncaminamentModule } from './app-encaminament.module';
 import { M01_SalutacioComponent } from './m01-salutacio.component';
 import {HttpClientModule} from '@angular/common/http';
 import {M12_Http} from './m12-http.component';
-import {M13_PrimeraComponent} from './m13-primera.component'
-import {M13_SegonaComponent} from './m13-segona.component'
-import {M13_EncaminamentPasComponent} from './m13-encaminament_pas.component'
+import {M15_PrimeraComponent} from './m15-primera.component'
+import {M15_SegonaComponent} from './m15-segona.component'
+import {M15_EncaminamentPasComponent} from './m15-encaminament_pas.component'
 
 @NgModule({
   declarations: [
@@ -42,9 +42,9 @@ import {M13_EncaminamentPasComponent} from './m13-encaminament_pas.component'
     M10_AnimacioComponent,
     M10_AnimacionsComponent,
     M11_EncaminamentComponent,
-    M13_EncaminamentPasComponent,
-    M13_PrimeraComponent,
-    M13_SegonaComponent
+    M15_EncaminamentPasComponent,
+    M15_PrimeraComponent,
+    M15_SegonaComponent
 
   ],
   imports: [
@@ -55,6 +55,6 @@ import {M13_EncaminamentPasComponent} from './m13-encaminament_pas.component'
     HttpClientModule
   ],
   providers: [],
-  bootstrap: [M13_EncaminamentPasComponent]
+  bootstrap: [M15_EncaminamentPasComponent]
 })
 export class AppModule { }
