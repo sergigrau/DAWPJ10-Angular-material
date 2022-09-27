@@ -22,19 +22,18 @@ import { Component } from '@angular/core';
     selector: 'aplicacio',
     template: `
 
-    <div class="form-group">
-    <input type="text" class="form-control"  placeholder="Entra nombre 1"  #n1 required>
+    <div>
+    <input type="text" placeholder="Entra nombre 1"  #n1 required>
     </div>
 
-    <div class="form-group">
-    <input type="text" class="form-control"  placeholder="Entra nombre 2"  #n2 required>
+    <div >
+    <input type="text"  placeholder="Entra nombre 2"  #n2 required>
     </div>
-    <button  class="btn btn-primary" (click)="sumar(n1.value, n2.value)"> suma </button> 
-    <button  class="btn btn-primary" (click)="restar(n1.value, n2.value)"> resta </button>
-    <div class="alert alert-primary" role="alert">
+    <button (click)="sumar(n1.value, n2.value)"> suma </button> 
+    <div role="alert">
       <h3>el resultat és {{resultat}} </h3>
     </div>
-      <h2 *ngIf="resultat<0">el valor es negatiu</h2>
+     
   
     `,
     styles: ['h2 { color: #900 }']
@@ -46,11 +45,9 @@ export class M02_SumaComponent {
     constructor() {
         this.resultat = 0;
     }
-    sumar(n1:number, n2:number): void {
-        this.resultat = n1 * 1 +n2 * 1;
+    sumar(n1:string, n2:string): void {
+        this.resultat = parseInt(n1)+parseInt(n2) ;
     }
-    restar(n1:number, n2:number): void {
-        this.resultat = n1 * 1 - n2 * 1;
-    }
+
 
 }
