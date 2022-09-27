@@ -30,13 +30,15 @@ import { Component } from '@angular/core';
     <input type="text"  placeholder="Entra nombre 2"  #n2 required>
     </div>
     <button (click)="sumar(n1.value, n2.value)"> suma </button> 
+    <button (click)="restar(n1.value, n2.value)"> resta </button> 
     <div role="alert">
-      <h3>el resultat és {{resultat}} </h3>
+      <h1>el resultat és {{resultat}} </h1>
     </div>
-     
-  
+    <h2 *ngIf="resultat<0">el valor es negatiu</h2>
+    <h3 *ngIf="resultat>10">el valor es superior a 10</h3>
+
     `,
-    styles: ['h2 { color: #900 }']
+    styles: ['h2 { color: #900 }', 'h3 {color:#0F0}']
 })
 export class M02_SumaComponent {
     
@@ -47,6 +49,9 @@ export class M02_SumaComponent {
     }
     sumar(n1:string, n2:string): void {
         this.resultat = parseInt(n1)+parseInt(n2) ;
+    }
+    restar(n1:string, n2:string): void {
+        this.resultat = parseInt(n1)-parseInt(n2) ;
     }
 
 
