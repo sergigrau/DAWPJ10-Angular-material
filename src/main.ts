@@ -1,12 +1,9 @@
-import { enableProdMode } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { appConfig } from './app/app.config';
+import { AppComponent } from './app/app.component';
+import { M01_SalutacioComponent } from './app/m01-salutacio.component.ts';  
+import { M02_SumaComponent } from './app/m02-suma.component';
+import { M02_SumaComponent_bis } from './app/src/app/m02bis-suma.component';
 
-import { AppModule } from './app/app.module';
-import { environment } from './environments/environment';
-
-if (environment.production) {
-  enableProdMode();
-}
-
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+bootstrapApplication(M02_SumaComponent_bis, appConfig)
+  .catch((err) => console.error(err));
