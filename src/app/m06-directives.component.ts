@@ -32,14 +32,14 @@ export class Alumne {
   imports: [CommonModule],
   template: `
       <p>expressió: {{estatVisible}}</p>
-      <button class="btn btn-primary" (click)="dada=2">dada 2</button>
-      <button class="btn btn-primary" (click)="dada=3">dada 3</button>
-      <button class="btn btn-primary" (click)="veureInfo()">Mostrar info</button>
+      <button (click)="dada=2">dada 2</button>
+      <button (click)="dada=3">dada 3</button>
+      <button  (click)="veureInfo()">Mostrar info</button>
         <div *ngIf="estatVisible">
           <h2 [ngStyle]="{'color': color}">Angular2!</h2>
         </div>
 
-        <ul class="list-group" >
+        <ul >
         <li [ngClass]="'blau'" *ngFor="let alumne of alumnes; let i = index">
         Alumne #{{i}} {{alumne.nom}}
         </li>
@@ -52,12 +52,19 @@ export class Alumne {
           </ng-container>
           <p *ngSwitchDefault>No has seleccionat res</p>
       </div>
+
+      <button (click)="mida=mida+1">˄</button>
+      <button (click)="mida=mida-1">˅</button>
+      <div [ngStyle]="{'font-size.px':mida}">DAW2</div>
+
+
   `,
   styles: ['.blau { color: #00F }']
 })
 export class M06_DirectivesComponent {
   color: string = 'rgb(150,0,0)';
   dada: number = 4;
+  mida:number =10;
   alumnes = [
     { id: 11, nom: 'Sergi' },
     { id: 12, nom: 'Joan' },
