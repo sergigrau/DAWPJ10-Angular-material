@@ -9,7 +9,8 @@
     <input type="checkbox" #practiques>
     </div>
    <button class="btn btn-primary" (click)="afegirAlumne(nom.value, nota.value, practiques.checked)">afegir</button>
-   <button   >esborrar</button>
+   <button class="btn btn-primary" (click)="esborrarAlumne(nom.value)">esborrar</button>
+
    
    <table >
    <thead >
@@ -22,7 +23,7 @@
    <th scope="col">{{i+1}}</th>
     <td> {{alumne.nom}}</td>
     <td> {{alumne.nota}}</td>
-    <td><input type="checkbox" [checked]="alumne.fcts" disabled></td>
+    <td><input type="checkbox" checked [checked]="alumne.fcts" disabled></td>
   </tr>
    </tbody>
    </table>
