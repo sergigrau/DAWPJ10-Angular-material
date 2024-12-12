@@ -14,19 +14,27 @@
  * ORIGEN
  * Desenvolupament Aplicacions Web. Jesuïtes El Clot
  */
-import { Component } from '@angular/core';
+import { Component, importProvidersFrom } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import {EstrellaPipe} from './estrella.pipe';
+import {InversaPipe} from './inversa.pipe';
+
 @Component({
     selector: 'aplicacio',
-    template: `<h1> uppercase {{cadena | uppercase}}</h1>
+    standalone: true,
+    imports: [CommonModule, EstrellaPipe, InversaPipe],
+    template: `<h1> majuscula {{cadena | uppercase}}</h1>
               <h1>lowercase {{cadena | lowercase}}</h1>
-              <h1>date:'MM/dd/yy' {{data | date:'MM/dd/yy'}}</h1>
+              <h1>date:'MM/dd/yy' {{data | date:'yyyy'}}</h1>
               <h1>date:'shortTime'{{data | date:'shortTime'}}</h1>
               <h1>number:'2.0-1' {{nombre | number:'2.0-1'}}</h1>
               <h1>number:'2.2-2' {{nombre2 | number:'2.2-2'}}</h1>
-              <h1>percent:'2.1-2' {{percentatge | percent:'2.1-2'}}</h1>
+              <h1>percent:'2.1-2' {{percentatge | percent:'2.0'}}</h1>
               <h1>currency:'EUR':'true':'2.1-2' {{import | currency:'EUR':'true':'2.1-2'}}</h1>
               <h1>slice:1:3 {{cadena | slice:1:3}}</h1>
               <h1>json {{ {"nom":"sergi", "cognom":"grau"} | json }}</h1>
+              <h1>La meva pipe{{ "hola alumnes de dAW2" | estrella }}</h1>
+              <h1>La meva pipe{{ "hola alumnes de dAW2" | inversa }}</h1>
               `
 })
 
