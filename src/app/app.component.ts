@@ -1,13 +1,24 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { routes } from './app.routes';
+
 
 @Component({
   selector: 'aplicacio',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
+  imports: [RouterModule],
+  template: `
+  
+      <h1> menu </h1>
+    <nav>
+      <a routerLink="/m01">M01 Salutacio</a>
+      <a routerLink="/m02">M02 Suma</a>
+      <a routerLink="/pipes">Pipes</a>
+    </nav>
+    <router-outlet></router-outlet>
+  `,
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'daw2-angular';
+  title = 'angular18';
 }
